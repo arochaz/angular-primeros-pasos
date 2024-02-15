@@ -1,0 +1,33 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+  <div class="row">
+  <div class="col">
+    <!-- tengo acceso a la informacion de nuestros characters -->
+    <!-- llamo a mi arreglo del main que le puse el nombre "lista"  -->
+    <!-- no aparece trunks porque ese era el valor por defecto -->
+
+    <app-dbz-list [characterList]="characters"
+    (onDelete)="onDeleteCharacter($event)"></app-dbz-list>
+
+    </div>
+      <div class= "col">
+        <!-- Cuando queremos llamar un evento lo hacemos entre parentesis() -->
+        <!-- En este caso queremos llamar al evento cuando addcharacter emita un nuevo personaje -->
+        <!-- Si queremos enviar inputs usamos [] -->
+
+      <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+
+
+  </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
